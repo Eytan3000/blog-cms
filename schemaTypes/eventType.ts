@@ -72,8 +72,7 @@ export const eventType = defineType({
                     name: 'href',
                     type: 'url',
                     title: 'URL',
-                    validation: (Rule) =>
-                      Rule.uri({scheme: ['http', 'https', 'mailto']}),
+                    validation: (Rule) => Rule.uri({scheme: ['http', 'https', 'mailto']}),
                   }),
                 ],
               },
@@ -152,6 +151,12 @@ export const eventType = defineType({
           },
         }),
       ],
+    }),
+    defineField({
+      name: 'linkedinPost',
+      title: 'LinkedIn Post',
+      type: 'text',
+      rows: 5,
     }),
     defineField({
       name: 'tags',
